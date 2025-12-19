@@ -1,0 +1,155 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", monospace;
+}
+
+/* ===== BACKGROUND OS ===== */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #0f2027, #020617);
+    color: #e5e7eb;
+}
+/* ===== CONTENT HEADER ===== */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+/* ===== ADD RESOURCE BUTTON ===== */
+.add-resource {
+    background: linear-gradient(135deg, #facc15, #eab308);
+    color: #020617;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: 0 0 18px rgba(250, 204, 21, 0.5);
+    transition: 0.25s;
+}
+
+.add-resource:hover {
+    transform: scale(1.05);
+}
+
+/* ===== DASHBOARD LAYOUT ===== */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 230px;
+    background: #020617;
+    border-right: 1px solid #1e293b;
+    padding: 24px;
+}
+
+.logo {
+    color: #22d3ee;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: 0.25s;
+}
+
+.sidebar nav a:hover {
+    background: #0f172a;
+    color: #22c55e;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    flex: 1;
+    padding: 32px;
+}
+
+.content h1 {
+    color: #e5e7eb;
+    margin-bottom: 24px;
+}
+
+/* ===== OS GRID ===== */
+.os-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* ===== OS CARD ===== */
+.os-card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.08);
+}
+
+.os-card h3 {
+    color: #22c55e;
+    margin-bottom: 10px;
+}
+
+.os-card p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.actions .start {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #020617;
+}
+
+.actions .config {
+    background: linear-gradient(135deg, #22d3ee, #0284c7);
+    color: #020617;
+}
+
+.actions button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}

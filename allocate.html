@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allocate Resource</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS spécifique -->
+    <link rel="stylesheet" href="./css/allocate.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Allocate New Resource</h1>
+
+    <form action="allocate.php" method="POST">
+
+        <div class="input-group">
+            <i class="fa-solid fa-desktop"></i>
+            <input type="text" name="vm_name" placeholder="VM Name" required>
+        </div>
+        <!-- OS Selection -->
+        <div class="input-group">
+            <i class="fa-solid fa-desktop"></i>
+            <select name="os" required>
+                <option value="">OS</option>
+                <option value="ubuntu">Ubuntu</option>
+                <option value="arch">Arch</option>
+            </select>
+            <select name="version" required>
+                <option value="">OS</option>
+                <option value="ubuntu">Ubuntu</option>
+                <option value="arch">Arch</option>
+            </select>
+        </div>
+
+        <!-- CPU -->
+        <div class="input-group">
+            <i class="fa-solid fa-microchip"></i>
+            <input type="number" name="cpu" placeholder="CPU Cores" min="1" max="16" required>
+        </div>
+
+        <!-- RAM -->
+        <div class="input-group">
+            <i class="fa-solid fa-memory"></i>
+            <input type="number" name="ram" placeholder="RAM (GB)" min="1" max="64" required>
+        </div>
+
+        <!-- Disk -->
+        <div class="input-group">
+            <i class="fa-solid fa-hdd"></i>
+            <input type="number" name="disk" placeholder="Disk (GB)" min="10" max="1024" required>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="submit"><i class="fa-solid fa-check"></i> Allocate</button>
+            <a href="home.php" class="cancel"><i class="fa-solid fa-xmark"></i> Cancel</a>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
