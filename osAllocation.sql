@@ -31,7 +31,7 @@ CREATE TABLE `personalInfo` (
   PRIMARY KEY (`id`),
   KEY `fk_user` (`user_id`),
   CONSTRAINT `fk_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `personalInfo` (
 
 LOCK TABLES `personalInfo` WRITE;
 /*!40000 ALTER TABLE `personalInfo` DISABLE KEYS */;
-INSERT INTO `personalInfo` VALUES (1,'ANJARAVONJISOA','Mandresy Clemence','mandresyclemenceanjaravonjisoa@gmail.com',1),(2,'HARITSARA','Lucas','lucas@gmail.com',2),(3,'RAZAKAMANANA','Heriniaina','nasa@gmail.com',4);
+INSERT INTO `personalInfo` VALUES (1,'ANJARAVONJISOA','Mandresy Clemence','mandresyclemenceanjaravonjisoa@gmail.com',1),(2,'HARITSARA','Lucas','lucas@gmail.com',2),(3,'RAZAKAMANANA','Heriniaina','nasa@gmail.com',4),(4,'mit','MISA','mit@gmail.com',5);
 /*!40000 ALTER TABLE `personalInfo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +95,7 @@ CREATE TABLE `templates` (
 
 LOCK TABLES `templates` WRITE;
 /*!40000 ALTER TABLE `templates` DISABLE KEYS */;
-INSERT INTO `templates` VALUES (101,'Ubuntu','Noble Numbat LTS 24.04.3');
+INSERT INTO `templates` VALUES (102,'Ubuntu','Noble Numbat LTS 24.04.3');
 /*!40000 ALTER TABLE `templates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,7 +112,7 @@ CREATE TABLE `users` (
   `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -121,7 +121,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','$2y$10$piXOpCnMPPMgAxn/M9KP8ej8PAIZWxYjm0CuFvlCeE.aGZCnAKgk6'),(2,'Lucas','$2y$10$nX5SZPLB8lwJnvNssidTpu.LiIrBN9ui/VWn3Y6MpRWmBZ4r7bkFC'),(4,'nasandratriniavo','$2y$10$du6qdKRFzur7of0YRgBILOtNErmunZ/7tHT3s3/46jHJBWSZnXEZe');
+INSERT INTO `users` VALUES (1,'admin','$2y$10$piXOpCnMPPMgAxn/M9KP8ej8PAIZWxYjm0CuFvlCeE.aGZCnAKgk6'),(2,'Lucas','$2y$10$nX5SZPLB8lwJnvNssidTpu.LiIrBN9ui/VWn3Y6MpRWmBZ4r7bkFC'),(4,'nasandratriniavo','$2y$10$du6qdKRFzur7of0YRgBILOtNErmunZ/7tHT3s3/46jHJBWSZnXEZe'),(5,'mit','$2y$12$g/fSmv0hQ777puzR1mpzwOfysWqT2tHoht1KKC9vJvfyBTsIFSnJ.');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -155,7 +155,7 @@ CREATE TABLE `virtualMachine` (
 
 LOCK TABLES `virtualMachine` WRITE;
 /*!40000 ALTER TABLE `virtualMachine` DISABLE KEYS */;
-INSERT INTO `virtualMachine` VALUES (105,'2025-12-19 07:07:26',1,'MISA',8,4,40,'192.168.11.151',101,'root',20,'running');
+INSERT INTO `virtualMachine` VALUES (101,'2025-12-22 06:27:39',1,'ecs2',4,4,30,'192.168.11.151',102,'geek',NULL,'stop'),(103,'2025-12-22 05:33:41',1,'Server',8,8,40,'192.168.11.152',102,'root',NULL,'stop'),(104,'2025-12-19 14:54:35',5,'MIT',8,4,20,'192.168.11.153',102,'mit',NULL,'running');
 /*!40000 ALTER TABLE `virtualMachine` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -168,4 +168,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-19 10:47:05
+-- Dump completed on 2025-12-23 10:36:30
